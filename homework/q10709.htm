@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q10709: Intersection is not that Easy</h1> 
+<p>在這個問題中，你的工作是找出兩條直線、直線與線段、或者是兩條線段之間的距離。假設現在有兩個 
+點 A(x1,y1) 和 B(x2,y2) ，位於二維座標平面上。如果我們連接 A、B 兩點，就得到了線段 AB；如果 
+我們連接 A、B 兩點，並將線段向兩端延伸，就得到了長度無線長的直線 AB。</p>  
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Input</span></b></p>   
+<p>輸入檔案有多組測試資料，格式如下所述：</p> 
+<p>每一組測試資料有兩行，每一行都有四個整數和一個字串，第一行依序為 x1、y1、x2、y2、S1，第二行依序為 
+x3、y3、x4、y4、S2。S1 和 S2 的值可能是 "L" 或 "LS"，分別代表著 "直線" 與 "線段"。(x1,y1) 和 (x2,y2) 代表第一條線的 
+兩個端點，這兩點不會是相同的兩個點，而 (x3,y3) 和 (x4,y4) 也是類似的意義。當 S1 和 S2 的值都為 "END" 時代表測試資料 
+結束，這一組測試資料不應該輸出任何答案。上述所有整數的絕對值都會小於 
+101。</p>
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Output</span></b></p>   
+<p>對於每組測試資料，你應該計算出兩條直線、直線與線段、或者是兩條線段之間的距離，以一個浮點數表示，精確度到小數點後五位 
+。誤差在 2e-5 之內都是允許的。輸出格式請參考Sample Output。</p> 
+<table border="1" width="100%" cellpadding="5">                    
+  <tr> 
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                                  
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                                 
+  </tr> 
+  <tr> 
+    <td width="50%" valign="top"> 
+      <pre>10 10 20 20 L
+-10 -10 19 19 L
+10 10 12 13 LS
+11 11 19 20 LS
+1 1 2 2 LS
+3 3 4 4 LS
+1 1 2 2 LS
+3 3 4 4 L
+10 10 12 12 END
+11 11 23 34 END
+</pre> 
+    </td> 
+    <td width="50%" valign="top"> 
+    <pre>0.00000
+0.27735
+1.41421
+0.00000
+</pre> 
+    </td> 
+  </tr> 
+</table> 
+ 
+<hr> 
+<address> 
+	<font color="#ffff00">        
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by DJWS</span></font></address> 
+</body> 
+</html> 

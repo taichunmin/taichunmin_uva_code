@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10157: Expressions</h1>              
+<p>令 X 表示正確的括號表示式。X 的內容為僅含 '('&nbsp; 和 ')'  
+的字串。定義如下：</p>    
+<ul> 
+  <li>空字串屬於 X。</li> 
+  <li>假如 A 屬於 X ，那麼 (A) 也屬於 X。</li> 
+  <li>假如 A 和 B 都屬於 X ，那麼 AB 也屬於 X。</li> 
+</ul> 
+<p>例如：以下的字串都是正確的括號表示式（所以當然屬於  
+X）</p> 
+<p><font face="Courier New">()(())()</font> 
+<p><font face="Courier New">(()(()))</font></p> 
+<p>而以下的字串不是正確的括號表示式（所以當然不屬於 X）</p> 
+<p><font face="Courier New">(()))(()</font> 
+<p><font face="Courier New">())(()</font></p> 
+<p>令 E 是一個正確的括號表示式（因此 E 屬於 X）。</p> 
+<p>E 的長度為字串的長度。</p> 
+<p>而 E 的深度 D(E) 被定義如下：</p> 
+<p><font face="Symbol">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+&igrave;</font><font face="Courier New"> 0 </font>如果 <font face="Courier New"> 
+E </font>是空字串<br> 
+<font face="Courier New">D(E)= </font><font face="Symbol">&iacute;</font><font face="Courier New">  
+D(A)+1 </font>如果 <font face="Courier New"> E = (A), </font>並且 <font face="Courier New"> 
+A </font>屬於 <font face="Courier New"> X</font><br>
+<font face="Symbol">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&icirc;</font><font face="Courier New"> max(D(A),D(B)) </font>如果 <font face="Courier New"> 
+E = AB, </font>並且 <font face="Courier New"> A, B </font>都屬於 <font face="Courier New"> 
+X</font></p>
+<p>例如：“()(())()” 的長度是&nbsp; 8 , 而深度為&nbsp; 2 。</p> 
+<p>給你 n 和 d ，你的任務是找出長度為 n，且深度為 d  
+的所有正確的括號表示式共有多少個。</p> 
+<p>例如： n=6, d=2 共有以下3種正確的括號表示式。</p> 
+<p><font face="Courier New">(())()</font><br> 
+<font face="Courier New">()(())</font><br> 
+<font face="Courier New">(()())</font></p> 
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                   
+<p><span lang="zh-tw">每組測試資料一列，含有&nbsp; 2 個整數 n 和  
+d（2 &lt;= n &lt;= 300，1 &lt;= d &lt;= 150）。</span></p>                
+<p><span lang="zh-tw">輸入不會超過 20  
+列，但可能含有空白列，你不用理會這些空白列。</span></p>                
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                              
+<p>對每一組測試資料輸出一列。長度為 n，且深度為 d  
+的所有正確的括號表示式共有多少個。</p> 
+<table border="1" width="100%" cellpadding="5">            
+  <tr>            
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                     
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                    
+  </tr>                    
+  <tr>                    
+    <td width="50%">     
+      <pre>6 2
+300 150
+100 2
+100 4
+100 19
+10 1
+10 2
+10 3
+10 4
+10 5</pre>  
+    </td>                  
+    <td width="50%">            
+      <pre>3
+1
+562949953421311
+119430741619474209626016
+10441348575948087788919740
+1
+15
+18
+7
+1</pre>  
+    </td>                 
+  </tr>                 
+</table>                 
+                                                   
+</body>                                                   
+                                                   
+</html>

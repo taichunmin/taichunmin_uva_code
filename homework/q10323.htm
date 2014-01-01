@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10323: Factorial! You Must be Kidding!!!</h1>              
+<p>Arif 到著名的跳蚤市場 Bongobazar 買了一台中古的超級電腦。這台二手的超級電腦有些小毛病，其中之一是它的 
+unsigned long integer 範圍改變了，變成從 10000 到 6227020800。現在 Arif要寫個整數的階乘程式，整數的階乘遞迴定義如下：<br>
+<br>
+                    Factorial (0) = 1<br> 
+                    Factorial (n) = n*factorial(n-1).<br> 
+<br> 
+Arif 知道他的程式在這台有毛病的中古超級電腦不會跑得很好，所以你現在要幫他模擬出他將會得到的結果。</p>
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                   
+<p>輸入含有多列測試資料，每列有一個不超過六位數的整數 n。 
+（譯註：n可以<font color="#FF0000">小於 0，</font>有點詭異吧！）</p>
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                              
+<p>對每一個測試資料 n 輸出一列，如果算出的 n! 在 Arif 
+電腦的 unsigned long integer 可接受範圍就輸出 n! 
+的值，否則就根據其錯誤情況輸出錯誤訊息：</p> 
+<p class="MsoNormal" style="TEXT-ALIGN: justify; mso-layout-grid-align: none"><span style="COLOR: windowtext; mso-bidi-font-size: 12.0pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b style="mso-bidi-font-weight: normal">Overflow! 
+//</b>（若 n! &gt; 6227020800）<b style="mso-bidi-font-weight: normal"><o:p>
+</o:p>
+</b></span></p>
+<p class="MsoNormal" style="TEXT-ALIGN: justify; mso-layout-grid-align: none"><b style="mso-bidi-font-weight: normal"><span style="COLOR: windowtext; mso-bidi-font-size: 12.0pt"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span>Underflow! //</span></b><span style="COLOR: windowtext; mso-bidi-font-size: 12.0pt">（若When 
+n! &lt; 10000）</span></p>
+<table border="1" width="100%" cellpadding="5">            
+  <tr>            
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                       
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                      
+  </tr>                      
+  <tr>                      
+    <td width="50%">       
+      <pre>-100
+-9
+2
+10
+100
+</pre>    
+    </td>                    
+    <td width="50%">              
+      <pre>Underflow!
+Overflow!
+Underflow!
+3628800
+Overflow!
+</pre>    
+    </td>                   
+  </tr>                   
+</table>                   
+                                                     
+<p><font color="#FFFF00"><span style="background-color: #000000">Translated by 
+Latinboy</span></font></p> 
+                                                     
+</body>                                                    
+                                                    
+</html>

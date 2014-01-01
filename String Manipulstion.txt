@@ -1,0 +1,246 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+/* reverse: reverse string s in place */
+void reverse (char s[])
+{
+  int c, i ,j;
+  for (i = 0, j = strlen(s) - 1; i < j; i++, j--)
+    {
+      c = s[i];
+      s[i] = s[j];
+      s[j] = c;
+    }
+}
+
+/* itoa: convert n to characters in s */
+void itoa(int n, char s[])
+{
+  int i, sign;
+  if ((sign = n) < 0) /* record sign */
+    n = -n;           /* make positive */
+  i = 0;
+
+  do {         /* generate digits in reverse order */
+    s[i++] = n % 10 + '0';       /* get next digit */
+  } while ((n != 10) > 0);
+  
+  if (sign < 0)
+    s[i++] = '-';
+  s[i] = '\0';
+  reverse(s);
+}
+
+main()
+{
+
+  return 0;
+}
+
+acmsolver -  11:43:44 - Code -  permalink - 
+[ACM Tutorial] Big Integer ( From Steven Halim / S.M Mahbub Murshed Suman )
+Long time ago, 16-bit integer is sufficient: [-2^15 .. 2^15-1] ~ [-32.768 .. 32.767].
+
+When 32-bit machines are getting popular, 32-bit integers become necessary. This data type can hold range from [-2^31 .. 2^31-1] ~ [2.147.483.648 .. 2.147.483.647]. Any integer with 9 or less digits can be safely computed using this data type. If you somehow must use the 10th digit, be careful of overflow...
+
+But man is very greedy, 64-bit integers are created, referred as programmers as long long data type or Int64 data type. It has an awesome range up that can covers 18 digits integers fully, plus the 19th digit partially [-2^63 .. 2^63-1] ~ [9.223.372.036.854.775.808 .. 9.223.372.036.854.775.807]. Practically this data type is safe to compute most of standard arithmetic problems... except some problems...
+
+Note: for those who don't know, in C, long long n is read using: scanf("%lld",&n); and unsigned long long n is read using: scanf("%llu",&n);
+
+Now... RSA cryptography need 256 bits of number or more... This is necessary, human always want more security right? However, some problem setters in programming contests also follow this trend... Simple problem such as finding n'th factorial will become very very hard once the values exceed 64-bit integer data type... Yes, long double can store very high numbers, but it actually only stores first few digits and an exponent, long double is not precise.
+
+In this case, you can't rely on standard data type and need to implement your own arbitrary precision arithmetic algorithm... Standard pen and pencil algorithm taught in elementary school will be your tool to implement basic arithmetic operations: addition, subtraction, multiplication and division. More sophisticated algorithm are available to enhance the speed of multiplication and division... Things are getting very complicated now...
+
+Fortunately, there are several people who have actually implement these Big Integer library and willing to share the code with us. In Programming Challenges website, they offer one version, but here, I want to share with you Big Integer library by S. M. Mahbub Murshed Suman (udvranto at yahoo.com).
+
+Please click the following links to download the library and a very basic sample code link. Follow the comments given in the sample code to use the library.
+
+The key feature of this library is its ability to override C++ basic operations, making life easier for us, programmers.
+
+Example:
+
+BigInteger n;
+// try giving input: "1000000000000000000000000000000000000", this is more than 19 digits
+cin >> n;
+cout << n << endl; // output will be: "1000000000000000000000000000000000000"
+
+I've used this library to solve many UVa problems. Try it.
+
+Solve UVa problems related with Big Integer:
+
+485 - Pascal Triangle of Death
+495 - Fibonacci Freeze - plus Fibonacci
+10007 - Count the Trees - plus Catalan formula
+10183 - How Many Fibs - plus Fibonacci
+10219 - Find the Ways ! - plus Catalan formula
+10220 - I Love Big Numbers ! - plus Catalan formula
+10303 - How Many Trees? - plus Catalan formula
+10334 - Ray Through Glasses - plus Fibonacci
+10519 - !!Really Strange!!
+10579 - Fibonacci Numbers - plus Fibonacci
+
+To see the Code Click on [Read more] : 
+
+[read more]
+
+acmsolver -  11:41:04 - Code -  permalink - 
+Code // Random Codes
+//increasing sequence//
+
+#pragma warning(disable: 4786)
+#include <string>
+#include <vector>
+#include <iterator>
+#include <algorithm>
+#include <cstdio>
+#include <cmath>
+#include <iostream>
+#include <sstream>
+
+using namespace std ;
+
+#define MAX 400
+
+static int data[MAX][MAX];
+static int length[MAX]; 
+
+/* length[i] is the length of the maximal increasing 
+subsequence of x[0]...x[n-1] that involves x[i] as its last element.
+data[i][0]...data[i][length[i]-1] is the sequence of 
+members of that maximal subsequence (so the last element is i).
+*/
+
+class Sequences{
+public: vector<int> LongestIncreasing(vector <int> x)
+{ 
+/* if there are several answers of maximum length, return one whose
+last element is as small as possible */
+int n = x.size(); 
+length[0] = 0;
+length[1] = 1;
+int i,j,k;
+
+data[0][0] = 0;
+length[0] =1;
+for(i=1;i<n;i++)
+{ int max1 = 0;
+// find the max length of increasing subsequences of x[0]...x[i-1]
+// ending in values < x[i]
+int index1 = -1;
+for(j=0;j<i;j++)
+{ if(x[j] < x[i])
+
+{ if(max1 < length[j] && x[j] < x[i])
+
+{ max1 = length[j];
+
+index1 = j;
+
+}
+
+}
+}
+if(index1 == -1)
+{ length[i] = 1;
+data[i][0] = x[i];
+}
+else
+{ length[i] = max1+1;
+for(k=0;k<max1;k++)
+
+{ data[i][k] = data[index1][k];
+
+}
+data[i][max1] = i;
+}
+} 
+// now data is complete
+int max = 0;
+int index = -1;
+for(i=0;i<n;i++) 
+{ if(length[i] > max)
+{ max = length[i];
+index = i;
+}
+}
+vector <int> ans;
+for(j=0;j< length[index];j++)
+{ ans.push_back(data[index][j]);
+}
+return ans;
+}
+};
+
+static int input[] = {5,1,6,7,3,4,5};
+int main()
+{ 
+Sequences z;
+vector <int> x;
+int i,j;
+for(i=0;i<sizeof(input)/sizeof(int);i++)
+x.push_back(input[i]);
+vector <int> ans;
+ans = z.LongestIncreasing(x);
+int n = x.size();
+printf("\nInput: ");
+for(i=0;i<n;i++)
+printf("%d ", x[i]);
+for(i=0;i<n; i++)
+{ printf("\nending at [%d] = %d",i,x[data[i][0]]);
+for(j=1;j<length[i];j++)
+printf(", %d", x[data[i][j]]);
+}
+printf("\n answer is ");
+int m =ans.size();
+for(i=0;i<m;i++)
+printf("%d ",x[ans[i]]);
+return 0; 
+} 
+
+// Base Conversion
+
+#include <iostream>
+#include <cmath>
+#include <string>
+
+using namespace std;
+
+int main(){
+
+int n, b;
+cin >> n >> b;
+
+string chars="0123456789ABCDEFGHIJ";
+string result="";
+
+while(n>0)
+{
+result=chars[n%b] + result;
+n/=b;
+}
+
+cout << result << endl;
+
+return 0;
+
+} 
+
+[read more]
+
+acmsolver -  11:33:21 - Code -  permalink - 
+Code // The Sieve of Eratosthenes
+#include <iostream>#include <cmath>
+	using namespace std;
+	int main(){
+	  int n;  cin >> n;  bool *prime = new bool[n+1];  int i;  for(i=0;i<n+1;i++){    prime[i] = true;  }  prime[0]=false;  prime[1]=false;  int m = (int)sqrt(n);
+	  for (i=2; i<=m; i++)      if (prime[i])	for (int k=i*i; k<=n; k+=i)	  prime[k]=false;
+	  for (i=0; i<n+1; i++){    if (prime[i]) cout << i << " ";  }
+	  cout << endl;
+	  return 0;}acmsolver -  10:04:17 - Code -  permalink - 
+
+Older articles:
+05.02.2007
+
+Code // The Sieve of Eratosthenes 
+

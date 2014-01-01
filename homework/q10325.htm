@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10325: The Lottery</h1>
+<p>孟加拉的運動聯盟最近在發行樂透（Lottery）時面臨一個問題，他們必須選擇一些號碼來作為這一期的號碼。但是要如何選呢？主席NondoDulal先生對歷史問題非常有興趣，他想要從其中想到解決的方法。你也許有興趣他如何得到解決的方法，最近他在讀 
+Joseph的問題。</p>
+<p>有 N 張票，編號從 1 到 N。Nondo先生將隨意的選 M 
+個數，然後他將每張票上的數字分別去除這M個數字，只要有任一個可以整除，那這張票就被丟棄。到最後沒有被丟棄的票就被當成樂透的號碼。</p>
+<p>例如：N=10, M=2, 且這2個數為 2,3。那麼最後留下來的票為 1, 5, 7 
+這3個數，因為2,3,4,6,8,9,10這7個數都至少被2或3其中之一整除。</p>
+<p>你也知道，任何數除1一定可以整除，所以Nondo先生絕不會選 1 為這M個數其中之一。現在給你N，M以及這M個數，你必須算出最後留下來被當樂透的數有多少個。</p>   
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                  
+<p><span lang="zh-tw">輸入含有多組測試資料。每組測試資料的第一列有 2 個正整數 N （10 &lt;= N &lt; 2<sup>31</sup>）和 
+M （ 1 &lt;= M &lt;= 15）。接下來的一列有M個正整數（皆不大於N）。請參考 Sample Input。</span></p>               
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                             
+<p>對每一組測試資料輸出一列，輸出最後留下來被當樂透的數有多少個。</p> 
+<table border="1" width="100%" cellpadding="5">            
+  <tr>            
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                   
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                  
+  </tr>                  
+  <tr>                  
+    <td width="50%">   
+      <pre>10 2
+2 3
+20 2
+2 4
+100 3
+3 5 7</pre>
+    </td>                  
+    <td width="50%">            
+      <pre>3
+10
+45
+
+
+</pre>
+    </td>                 
+  </tr>                 
+</table>                 
+                                                   
+</body>                                                   
+                                                   
+</html>

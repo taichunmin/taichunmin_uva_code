@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10174: Couple-Bachelor-Spinster Numbers</h1>              
+<p>任何數都可以用2個平方數的差來表達嗎？例如：40 可以用11<sup>2 
+</sup>- 9<sup>2</sup><sup> </sup>或者 7<sup>2 </sup>- 3<sup>2</sup>來表達。如果可以的話，我們稱這些數為「<b>square-couple</b> 
+numbers」。你的任務是找出：</p>   
+<ul>
+  <li>某個數是否為 square-couple number。</li>
+  <li>如果某個數是 square-couple number，找出他的形式。</li>
+  <li>找出在2個數之間（包含這2個數）共有多少個不是 square 
+    couple number且為偶數。</li>
+</ul>
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                  
+<p><span lang="zh-tw">輸入含有多組測試資料。</span></p>            
+<p><span lang="zh-tw">每組測試資料一列，含有 1 個或 2 個 32 
+位元有號整數（singed 32 bit integer）。</span>請參考Sample Input。</p>               
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                             
+<p>對每一組測試資料輸出一列。如果輸入僅有1個整數 <b>N</b>，請輸出兩個不為負數的整數 
+<b>a</b> 和 <b>b</b> ，使得&nbsp; <b>a*a - b*b = N</b>。如果找不到這樣的形式，若 
+N 為偶數請輸出 <b>Bachelor Number.</b> ，若 N 為奇數請輸出 <b>Spinster 
+Number.</b> 。</p>
+<p>如果輸入有2個整數 <b>n<sub>1</sub></b> 和 <b>n<sub>2</sub></b>，請輸出介於 
+<b>n<sub>1</sub></b> 和 <b>n<sub>2</sub></b>（包含 <b>n<sub>1</sub></b> 和 <b>n<sub>2</sub></b>）之間，有多少個 
+<b>bachelor</b> number。請注意 <b>n<sub>1</sub></b> &lt; <b>n<sub>2</sub></b><b><sub>&nbsp; 
+，</sub></b>並且 ( <b>n<sub>2</sub></b> - <b>n<sub>1</sub></b>)&lt;=1000000。</p>
+<table border="1" width="100%" cellpadding="5">           
+  <tr>           
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                   
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                  
+  </tr>                  
+  <tr>                  
+    <td width="50%">   
+      <pre><font face="Courier, Arial, Times New Roman" size="3">6
+12
+3
+-5
+3 7
+-6</font></pre> 
+    </td>                 
+    <td width="50%">           
+      <pre><font face="Courier, Arial, Times New Roman" size="3">Bachelor Number.
+4 2
+2 1
+2 3</font>
+1
+<font face="Courier, Arial, Times New Roman" size="3">Bachelor Number.</font></pre> 
+    </td>                
+  </tr>                
+</table>                
+                                                  
+</body>                                                  
+                                                  
+</html>

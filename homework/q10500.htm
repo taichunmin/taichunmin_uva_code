@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://www2.dmhs.kh.edu.tw/homework/q10006.htm -->
+<HTML><HEAD><TITLE>q10500 - Robot maps</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=big5">
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY>
+<H1 align=center>Q10500: Robot maps</H1>
+<P style="BACKGROUND-COLOR: #ffff00" align=left><b>The Problem</b></P>
+<p>ACM工廠生產很多危險的物品並且放在工廠裡。這就是為什麼沒有人被允許進入儲藏室，只有特殊的機器人才可以進去儲存新貨物或者提取貨物來賣。ACM工廠正在測試一種機器人，這種機器人能建造地圖並記錄它走過的地方。</p>
+<p>這個機器人一剛開始可以被放在儲藏室的任何一個地方。在開始移動前，機器人把地圖切成格子狀，並把每一個格子初始化成<span lang="EN-GB" style="mso-ansi-language: EN-GB">‘?’，代表「未知的格子」。機器人剛開始的位置一定是空的，也就是說這個地方沒有物品。首先，機器人把起點記錄在地圖上。然後，機器人探察四個方向的感應器的訊號，這四個感應器分別回傳機器人的北方、東方、南方及西方這四個格子是不是可以走的。如果不能走，感應器會回傳‘X’，否則感應器會回傳‘0’代表可以走，並且機器人會把這四個格子的狀態會記錄到地圖上。然後，機器人會選擇第一個可以走的格子<sub><font size="1">（註1）</font></sub>前進，並且重覆這個動作
+──偵測身邊四個格子的狀態，並且前進到下一個可以走的格子。當機器人的四個方向皆為物品或者探察過了，就會停下來。最後，機器人會把儲藏室的地圖印出來。</span></p>
+<p><span style="mso-ansi-language: EN-GB" lang="EN-GB">註1：檢查可以走的格子的順序，首先是北方，然後順時針檢查。檢查到第一個可以走的格子就前進。</span></p>
+<p><span style="mso-ansi-language: EN-GB" lang="EN-GB">註2：輸入和輸出的‘0’為數字「零」。</span></p>
+<P style="BACKGROUND-COLOR: #ffff00" align=left><SPAN
+style="BACKGROUND-COLOR: #ffff00"><B>Input</B></SPAN></P>
+<P>每一組測資包涵 <span lang="EN-GB" style="mso-ansi-language: EN-GB"><b>2+N
+</b></span>行。第一行包涵兩個整數，<span lang="EN-GB" style="mso-ansi-language: EN-GB"><b>N
+</b></span>和 <span lang="EN-GB" style="mso-ansi-language: EN-GB"><b>M</b></span>，代表這個地圖的大小。兩個整數用一個空白隔開，而且符合<span lang="EN-GB" style="mso-ansi-language: EN-GB"><span style="mso-spacerun: yes">&nbsp;
+</span><b>0 &lt; N &lt;= 10</b></span>，<span lang="EN-GB" style="mso-ansi-language: EN-GB"><b>0
+&lt; M &lt;= 10</b>。第二行有兩個整數，<b>x_ini</b>&nbsp; 和 <b>y_ini</b>機器人開始的位置。</span>兩個整數用一個空白隔開，而且符合<span lang="EN-GB" style="mso-ansi-language: EN-GB"><b>1
+&lt;= x_ini<span style="mso-spacerun: yes">&nbsp; </span>&lt;= N </b>和 <b>1
+&lt;= y_ini &lt;= M</b>。接下來的<b> N </b>行，每行有<b> M</b>
+個字母，‘X’ 或者是
+‘0’。字母和字母之間有一個空白相隔。‘X’代表有物品，‘0’代表空的區域。這個地圖一定是正確的，也就是說機器人開始的位置一定是空的區域。當<b>
+N</b>=0
+且 <b>M</b>=0 時代表輸入的結束。</o:p>
+</span></P>
+<P style="BACKGROUND-COLOR: #ffff00" align=left><SPAN
+style="BACKGROUND-COLOR: #ffff00"><B>Output</B></SPAN></P>
+<p>每一組測資都要先印出一個空白行，接下來是機器人偵測到的地圖，再一個空白行，再來是機器人移動了幾步。</p>
+<p>機器人偵測到的地圖格式如下：</p>
+<p class="MsoPlainText"><span lang="EN-GB" style="mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-GB"><font face="Courier New">|---|---|
+… M … |---|<br>
+| s | s | … M … | s |<br>
+|---|---| … M … |---|<br>
+| s | s | … M … | s |<br>
+|---|---| … M … |---|<span style="mso-tab-count: 2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font>s </span><span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; mso-fareast-font-family: MS Mincho; mso-ascii-font-family: Courier New; mso-hansi-font-family: Courier New; mso-ansi-language: EN-GB" lang="EN-GB">&Icirc;</span><span lang="EN-GB" style="mso-fareast-font-family: 'MS Mincho'; mso-ansi-language: EN-GB">
+{‘X’, ‘0’, ‘?’}<font face="Courier New"><br>
+… N …<br>
+|---|---| … M … |---|<br>
+| s | s | … M … | s |<br>
+|---|---| … M … |---|</font><o:p>
+</o:p>
+</span></p>
+<P style="BACKGROUND-COLOR: #00ff00" align=left><SPAN
+style="BACKGROUND-COLOR: #00ff00"><B>Sample Input</B></SPAN></P><PRE>5 5
+1 3
+X X 0 0 X
+X X 0 0 X
+X 0 X 0 X
+X 0 0 0 X
+X X X X X
+5 5
+1 1
+0 0 X X X
+X X 0 0 X
+X 0 0 0 X
+X 0 0 0 X
+X X X X X
+5 3
+3 2
+X X X
+X 0 X
+X 0 X
+X 0 X
+X X X
+0 0
+</PRE>
+<P style="BACKGROUND-COLOR: #00ff00" align=left><SPAN
+style="BACKGROUND-COLOR: #00ff00"><B>Sample Output</B></SPAN></P><PRE>
+|---|---|---|---|---|
+| ? | X | 0 | 0 | X |
+|---|---|---|---|---|
+| ? | X | 0 | 0 | X |
+|---|---|---|---|---|
+| X | 0 | X | 0 | X |
+|---|---|---|---|---|
+| X | 0 | 0 | 0 | X |
+|---|---|---|---|---|
+| ? | X | X | X | ? |
+|---|---|---|---|---|
+
+NUMBER OF MOVEMENTS: 7
+
+|---|---|---|---|---|
+| 0 | 0 | X | ? | ? |
+|---|---|---|---|---|
+| X | X | ? | ? | ? |
+|---|---|---|---|---|
+| ? | ? | ? | ? | ? |
+|---|---|---|---|---|
+| ? | ? | ? | ? | ? |
+|---|---|---|---|---|
+| ? | ? | ? | ? | ? |
+|---|---|---|---|---|
+
+NUMBER OF MOVEMENTS: 1
+
+|---|---|---|
+| ? | X | ? |
+|---|---|---|
+| X | 0 | X |
+|---|---|---|
+| X | 0 | X |
+|---|---|---|
+| ? | 0 | ? |
+|---|---|---|
+| ? | ? | ? |
+|---|---|---|
+
+NUMBER OF MOVEMENTS: 1
+</PRE>
+<hr>
+<address>
+  <font color="#ffff00"><span style="FONT-STYLE: normal; BACKGROUND-COLOR: rgb(0,0,0)">Translated
+  by TimeString</span></font>
+</address>
+</BODY></HTML>
+

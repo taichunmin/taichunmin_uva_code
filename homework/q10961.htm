@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q10961: Chasing After Don Giovanni</h1> 
+<p>在第二幕裡，Masetto 帶領著一群村民追逐著 Don Giovanni。其實 Giovanni 向 Leporello 交換了身上的衣服，讓人認不出他
+來，而 Masetto 正向 Giovanni 詢問他的 "主人" 在哪裡。為了避免麻煩，假的 "Leporello"（由 Giovanni 假扮）希望能誤導村
+民，讓他們找不到假的 "Giovanni"（由 Leporello 假扮）。Giovanni 知道 Leporello 逃跑的路線，而且他心裡面也計
+劃出一條安全的路線（讓村民遇不到 Leporello 的路線）。他想要確定這條路線是不是真的安全。</p>
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Input</span></b></p>
+<p>輸入的第一列有一個正整數，代表接下來有多少組測試資料。</p>
+<p>每筆測試資料的第一列和第二列，分別是 Don Giovanni 現在的地點（也是 Masetto 和村民們的地點）和 Leporello 現在的地點。
+地點由兩個數字組成：橫的街道（Street）編號和直的街道（Avenue）編號。你可以假設所有的街道形成了方格狀，然後橫的街道由
+北到南編號，直的街道由西向東編號。兩兩相鄰的平行街道之間的距離都會一樣。</p>
+<p>接下來會有兩組路線，第一組是 Leporello 的逃跑路線，第二組則是 Giovanni 準備要告訴大家的路線。每一組路線的第一行都會
+有一個數字，表示這組路線的中繼點個數，接著便是所有的中繼點地點。每一個中繼點都是一個可能轉彎的地點。在中繼點之間的路徑
+一定是在某條街道上的直線路徑。最後一個中繼點即是路線的終點。</p>
+<p>Leporello 和村民的行進速度是相同的。你可以假設街道的編號最大為 1000000，一組路線最多有 100 個中繼點。
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Output</span></b></p>
+<p>對於路線是否安全，印出一行 "Yes" 或 "No"。注意到路線不安全的情況，只有村民和 Leporello 恰好在同時間、同地點相遇
+的時候才會發生。此外，如果在路線的終點相遇，可以算是安全的（因為任務已經完成了）。每筆輸出之間請空一行，
+請參考Sample Output。</p>
+<table border="1" width="100%" cellpadding="5">
+  <tr>
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <pre>2
+
+2 3
+5 2
+3
+5 4
+3 4
+3 6
+4
+4 3
+4 5
+5 5
+5 6
+
+2 2
+4 2
+3
+6 2
+6 3
+3 3
+3
+2 4
+5 4
+5 6
+</pre>
+    </td>
+    <td width="50%" valign="top">
+    <pre>No
+
+Yes
+</pre>
+    </td>
+  </tr>
+</table>
+
+<hr>
+<address>
+	<font color="#ffff00">
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by DJWS</span></font></address>
+</body>
+</html>

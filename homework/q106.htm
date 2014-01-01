@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q106: Fermat vs. Pythagoras</h1>
+<p>著名的費馬大定理是指：當n&gt;2時，x<sup>n</sup>+y<sup>n</sup>=z<sup>n</sup> 
+無整數解，這邊我們要處理的問題跟費馬大定理有點關係。<br>
+<br>
+給你一個正整數 N，你的任務是算出兩個與方程式 x<sup>2</sup>+y<sup>2</sup>=z<sup>2 </sup>的解相關的數字。( 0 &lt; 
+x &lt; y &lt; z &lt;= N )<br>
+<br>
+第一個數字是互質的數對(triples) (x,y,z) 數目。互質是指 x、y、z 沒有大於 1 的公因數。第二個數字p是在 小於等於 N 
+的數字內不屬於任何數對 (x,y,z) 的正整數總數，這邊 x、y、z不需要互質。<br>
+<br>
+例如，N=10，可找到一組 互質數對 (3,4,5)&nbsp; 及 一組不互質的數對 (6,8,10)， 1、2、7、9 共 4 
+個數字沒用到。所以N=10要輸出1與4。</p>
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                    
+<p>輸入含有多組測試資料，每組測試資料一列，有一個正整數 N （1 &lt;= N &lt;= 1000000）</p> 
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                               
+<p>輸出一列，含兩個整數，如題目所述，數字中間以一個空白字元分隔。</p>  
+<table border="1" width="100%" cellpadding="5">             
+  <tr>             
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                        
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                       
+  </tr>                       
+  <tr>                       
+    <td width="50%">        
+      <PRE>
+10
+25
+100
+500
+1000000</PRE>   
+    </td>                     
+    <td width="50%">               
+      <pre>1 4
+4 9
+16 27
+80 107
+159139 133926</pre>     
+    </td>                    
+  </tr>                    
+</table>                    
+                                                      
+<p><font color="#FFFF00"><span style="background-color: #000000">Translated by  
+Latinboy</span></font></p> 
+                                                     
+</body>                                                     
+                                                     
+</html>

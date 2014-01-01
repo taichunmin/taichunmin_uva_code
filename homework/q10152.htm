@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://www2.dmhs.kh.edu.tw/homework/q10329.htm -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="text/html; charset=big5" http-equiv=Content-Type>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY>
+<H1 align=center>Q10152: ShellSort</H1>
+<P>烏龜王國的烏龜總是一隻一隻疊在一起。唯一改變烏龜位置的方法為：一隻烏龜爬出他原來的位置，然後往上爬到最上方。給你一堆烏龜原來排列的順序，以及我們想要的烏龜的排列順序，你的任務是按照先後次序列出出哪隻烏龜需往上爬，使得可以產生所要的烏龜排列順序，且爬的動作要發生最少。</P>
+<P align=left style="BACKGROUND-COLOR: #ffff00"><SPAN 
+style="BACKGROUND-COLOR: #ffff00"><B>Input</B></SPAN></P>
+<P>輸入的第一列有一個整數，代表以下有多少組測試資料。每組測試資料的第一列有1個整數 
+n （n&lt;=200），代表烏龜的數目。接下來的 n 列每列有一隻烏龜的名字（烏龜名字均為唯一，且僅包含字元、空白、句點，長度不會超過80個字元），代表原來烏龜排列的順序（由上到下）。再接下來的 
+n 
+列每列也有一隻烏龜的名字，代表我們想要的烏龜排列順序（也是由上到下）。請參考Sample Input。</P>
+<P align=left style="BACKGROUND-COLOR: #ffff00"><SPAN 
+style="BACKGROUND-COLOR: #ffff00"><B>Output</B></SPAN></P>
+<P>對每組測試資料輸出一序列烏龜的名字，每個名字一列，代表往上爬的烏龜順序。這個順序可以使輸入中原來的烏龜順序變成我們想要的烏龜順序，且此序列越短越好。如果有不只一組解答，任何一組都可以。每組測試資料之後亦請輸出一空白列，請參考Sample 
+Output。</P>
+<TABLE border=1 cellPadding=5 width="100%">
+  <TBODY>
+  <TR>
+    <TD bgColor=#00ff00 width="50%"><B>Sample Input</B></TD> 
+    <TD bgColor=#00ff00 width="50%"><B>Sample Output</B></TD></TR> 
+  <TR> 
+    <TD width="50%"> 
+      <pre>2
+3
+Yertle
+Duke of Earl
+Sir Lancelot
+Duke of Earl
+Yertle
+Sir Lancelot
+9
+Yertle
+Duke of Earl
+Sir Lancelot
+Elizabeth Windsor
+Michael Eisner
+Richard M. Nixon
+Mr. Rogers
+Ford Perfect
+Mack
+Yertle
+Richard M. Nixon
+Sir Lancelot
+Duke of Earl
+Elizabeth Windsor
+Michael Eisner
+Mr. Rogers
+Ford Perfect
+Mack</pre>
+    </TD> 
+    <TD width="50%"><PRE>Duke of Earl
+
+Sir Lancelot
+Richard M. Nixon
+Yertle</PRE></TD></TR></TBODY></TABLE></BODY></HTML> 

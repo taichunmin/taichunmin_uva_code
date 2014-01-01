@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10271: Chopsticks</h1>              
+<p>在中國，人們用一雙筷子來挾取桌上的食物。但是李先生有點不同，他使用三支筷子。除了原來的一雙筷子外，他用另一支特別長的筷子來叉食物。如同你所猜想的，那2支較短的筷子的長度應該盡可能的接近。而第三支筷子的長度則不是那麼重要，只要是3支筷子中最長的就可以了。為了讓事情清楚些，我們說三支筷子的長度為A、B、C（A       
+&lt;= B &lt;= C），我們稱 (A-B)<sup>2</sup> 為一組筷子的「爛度（badness）」。</p>          
+<p>現在是12月2號，是李先生的生日。他邀請 K       
+個人來參加他的生日宴會，並且要介紹他使用筷子的方法。所以他準備了       
+K+8       
+組筷子（給他自己、他老婆、他小兒子、他小女兒、他爸爸、媽媽、岳父、岳母，以及       
+K       
+個客人）。但是李先生突然發現他的筷子有不同的長度。他想要找到一個方法來組成這       
+K+8 組筷子，使得這K+8 組筷子的「爛度」和為最小。</p>          
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                         
+<p><span lang="zh-tw">輸入的第一列有一個整數 T，代表以下有多少組測試資料。(       
+1 &lt;= T &lt;= 20)</span></p>                      
+<p><span lang="zh-tw">每組測試資料的第一列有2個整數 <b>K</b>，<b>N</b>（0       
+&lt;= K &lt;= 1000, 3K+24 &lt;= N &lt;= 5000）開始。K       
+代表客人的數目，N 代表筷子的數目。接下來的一列有 N       
+個正整數代表這 N       
+支筷子的長度。這N個數以「非遞減」的順序出現，且值均介於1到32000之間。</span></p>                      
+<p><span lang="zh-tw">請參考 Sample Input。</span></p>                       
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                                     
+<p>對每一組測試資料輸出「爛度」最小為多少。</p>       
+<table border="1" cellpadding="5" width="100%">                  
+  <tr>                  
+    <td  bgcolor="#00FF00" width="581"><b>Sample Input</b></td>                             
+    <td  bgcolor="#00FF00" width="54"><b>Sample Output</b></td>                            
+  </tr>                            
+  <tr>                            
+    <td width="90%">             
+      2<br>    
+1 40<br>    
+1 8 10 16 19 22 27 33 36 40 47 52 56 61 63 71 72 75 81 81 84 88 96 98 103 110 113 118 124 128 129 134 134 139 148 157 157 160 162 164<br>    
+2 40<br>    
+3 8 10 16 19 22 27 33 36 40 47 52 56 61 63 71 72 75 81 81 84 88 96 98 103 110 113 118 124 128 129 134 134 139 148 157 157 160 162 199    
+    
+          
+    </td>                          
+    <td width="10%">                    
+      23<br>
+32<br><br><br><br>
+    </td>                         
+  </tr>                         
+</table>                         
+                                                           
+<p><b>注意：</b></p>      
+<p>以第一組測試資料為例，這9組筷子可能的組成方式為：(<font face="Courier" size="3">8,10,16)       
+(19,22,27) (61,63,75) (71,72,88) (81,81,84) (96,98,103) (128,129,148)       
+(134,134,139) (157,157,160)</font><font size="3">。其「爛度」為</font><font face="Courier" size="3">4+9+4+1+0+4+1+0+0       
+= 23<br>      
+</font></p>      
+                                                          
+</body>                                                          
+                                                          
+</html>

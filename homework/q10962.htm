@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q10962: Don Giovanni's Last Dinner</h1> 
+<p>Don Giovanni 吃了很多道菜──幾乎都是他吃的。可憐的 Leporello 只能在一旁看著流口水。每當 Don Giovanni 放棄吃 
+一道菜，Leporello 的機會就來了：他可以將主人沒吃完的菜端走，在背地裡偷偷的吃掉，而且他一拿到剩菜就會馬上開始吃。 
+但是他是個僕人，每當主人呼喚命令他，他就必須要開口回應。所以當主人呼喚他，他卻滿口食物，而無法開口回應時，場面就 
+會變得非常尷尬。</p> 
+<p>請寫一支程式來判斷 Don Giovanni 在呼喚 Leporello 時，Leporello 是不是正好滿口食物。</p> 
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Input</span></b></p> 
+<p>輸入的第一列有一個正整數，代表接下來有多少組測試資料。</p> 
+<p>每筆測試資料的第一行包含四個數字：R 代表 Don Giovanni 吃東西的速度、r 代表 Leporello 吃東西的速度，N 代表 
+盤子的總數、C 代表呼叫的次數。</p> 
+<p>接下來的 N 行，每一行都代表一道菜。每一行都有兩個數字 s、g（s &gt; g &gt; 0），s 表示這道菜當中所含的食物總 
+量，g 是 Don Giovanni 所吃掉的量。Don Giovanni 會依序吃完這 N 道菜。當 Don Giovanni 停止吃一道菜時，他會馬上將盤 
+子交給 Leporello，然後繼續接著吃下一道菜。而Leporello 
+只要有剩菜也會一直吃，每道剩菜他一定會把它吃光。如果你想要知道的話，他也會依序吃完這 N 
+道剩菜。</p>
+<p>接下來的 C 行，每一行都代表一次呼叫。每一行都有一個數字 t，代表 Don Giovanni 呼叫 Leporello 的時刻（Don Giovanni 開 
+始用餐的時候，時刻為 0）。很神奇的，Don Giovanni 不會因為這些呼叫而影響他吃東西的速度。每一行的 t 會逐漸遞增。</p> 
+<p>上述所有數字都是正整數，數值最大到 2000。輸入格式請參考 Sample Input。</p> 
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Output</span></b></p> 
+<p>對於每次呼叫，如果 Leporello 正好滿口食物就輸出一行 "full"，否則就輸出一行 "clear"。每筆輸出之間請空一行，請參考Sample Output。</p> 
+<p>邊界判斷：如果恰好在 Leporello 開始吃或停止吃的那一刻呼叫他呢？請視為他正好滿口食物。</p> 
+<table border="1" width="100%" cellpadding="5"> 
+  <tr> 
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td> 
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td> 
+  </tr> 
+  <tr> 
+    <td width="50%" valign="top"> 
+      <pre>2
+
+10 7 5 4
+60 30
+150 125
+55 35
+70 40
+42 38
+2
+10
+19
+23
+
+1 3 3 10 
+5 1 
+5 1 
+5 1 
+0 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 </pre> 
+    </td> 
+    <td width="50%" valign="top"> 
+    <pre>clear
+clear
+full
+full
+
+clear 
+full 
+full 
+full 
+full 
+full 
+clear 
+clear 
+clear 
+clear 
+</pre> 
+    </td> 
+  </tr> 
+</table> 
+ 
+<hr> 
+<address> 
+	<font color="#ffff00"> 
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by DJWS</span></font></address> 
+</body> 
+</html> 

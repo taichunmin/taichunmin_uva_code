@@ -1,0 +1,152 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q681: Convex Hull Finding</h1> 
+<p>一個圖形的輪廓（contour），形狀可能是凸的或不是凸的（有凹的地方）。請運用任何一種可行的演算法，找出輪廓的<b>凸包</b>（convex 
+hull）、也就是剛好能包住其形狀的凸輪廓。如果輪廓形狀是凸的，那麼它的凸包便是輪廓本身。這裡設定圖形的尺寸最大為 
+512 × 512，最多有 512 個頂點。請寫出一支程式，讀取輸入資料（圖形），執行你的凸包演算法，然後將結果輸出。</p> 
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Input</span></b></p>  
+<p>圖形的頂點都在二維座標平面上，依逆時針方向排序（如果你想將原點設在視窗的左上角，則會變成順時針方向），而且相鄰的頂點們都不會有三點共線的情形。由於所有的圖形都是封閉的輪廓，因此圖形的最後一個頂點也會是第一個頂點。測試資料有好幾組，每組測試資料之間皆以 -1 隔開。</p>
+<table border="1" width="100%" id="table1">
+	<tr>
+		<td align="center"><b>行數</b></td>
+		<td><b>輸入資料</b></td>
+		<td><b>釋義</b></td>
+	</tr>
+	<tr>
+		<td align="center">1</td>
+		<td>K</td>
+		<td>一個正整數，表示共有多少組測試資料。一組測試資料代表一個圖形。</td>
+	</tr>
+	<tr>
+		<td align="center">2</td>
+		<td>N</td>
+		<td>一個正整數，表示該圖形有多少個頂點。接下來有N個頂點的座標。</td>
+	</tr>
+	<tr>
+		<td align="center">3</td>
+		<td>X<sub>1</sub> Y<sub>1</sub></td>
+		<td>兩個正整數，表示第一個頂點的座標。</td>
+	</tr>
+	<tr>
+		<td align="center">4</td>
+		<td>X<sub>2</sub> Y<sub>2</sub></td>
+		<td>兩個正整數，表示下一個相鄰頂點的座標。</td>
+	</tr>
+	<tr>
+		<td align="center">...</td>
+		<td>　</td>
+		<td>　</td>
+	</tr>
+	<tr>
+		<td align="center">N+2</td>
+		<td>X<sub>N</sub> Y<sub>N</sub></td>
+		<td>兩個正整數，表示最後一個頂點的座標。它會與第一個頂點的座標相同。</td>
+	</tr>
+	<tr>
+		<td align="center">N+3</td>
+		<td>-1</td>
+		<td>第一組測試資料結束。</td>
+	</tr>
+	<tr>
+		<td align="center">N+4</td>
+		<td>M</td>
+		<td>一個正整數，表示第二個圖形有多少個頂點。</td>
+	</tr>
+	<tr>
+		<td align="center">N+5</td>
+		<td>XX<sub>1</sub> YY<sub>1</sub></td>
+		<td>兩個正整數，表示第一個頂點的座標。</td>
+	</tr>
+	<tr>
+		<td align="center">...</td>
+		<td>　</td>
+		<td>　</td>
+	</tr>
+</table>
+<p><b>注意：</b>請注意到<b>行數</b>、<b>輸入資料</b>、<b>釋義</b>的欄位內容不會出現在測試資料當中。這裡只是方便讓各位了解測試資料的意義。&nbsp;</p>
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Output</span></b></p>   
+<p>按順序輸出 K 個圖形的凸包。輸出格式應該要與上面表格所述的輸入格式相同。還有，請選出 Y 座標最小的頂點，作為第一個頂點；如果遇到 Y 座標一樣小的情況，再從中選出 X 座標最小的頂點，作為第一個頂點。</p>
+<table border="1" width="100%" cellpadding="5">                   
+  <tr>                   
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                                 
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                                
+  </tr>                                
+  <tr>                                
+    <td width="50%" valign="top">                 
+      <pre>3
+15
+30 30
+50 60
+60 20
+70 45
+86 39
+112 60
+200 113
+250 50
+300 200
+130 240
+76 150
+47 76
+36 40
+33 35
+30 30
+-1
+4
+2 3
+1 2
+2 1
+3 2
+-1
+8
+1 1
+3 2
+5 1
+4 3
+5 5
+3 4
+1 5
+2 3
+</pre>
+    </td>                                
+    <td width="50%" valign="top">                          
+    <pre>3
+8
+60 20
+250 50
+300 200
+130 240
+76 150
+47 76
+30 30
+60 20
+-1
+4
+2 1
+2 3
+1 2
+2 1
+-1
+5
+1 1
+5 1
+5 5
+1 5
+1 1
+</pre>
+    </td>                               
+  </tr>                               
+</table>                               
+                                                                 
+<hr>       
+<address>       
+	<font color="#ffff00">       
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by DJWS</span></font></address>
+</body>   
+</html>   

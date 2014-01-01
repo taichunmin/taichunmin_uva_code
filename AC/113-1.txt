@@ -1,0 +1,14 @@
+/* acm113 */
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main( void )
+{
+	double n , k ;
+	while( cin >> n >> k ){
+		cout.setf(ios::fixed,ios::floatfield);
+		cout.precision(0);
+		cout <<  pow( k , 1/n ) << endl ;
+	}
+	return 0;
+}

@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q11001: Necklace</h1>
+<p>某些種族的人製作一種直徑相同的圓形陶盤，而一條項鍊是以一個或多個盤子連接而成的。下圖顯示一條以四個盤子形成的項鍊。項鍊的長度是每個盤子的直徑*盤子個數。</p>
+<p><img border="0" src="p11001a.gif" width="241" height="53"><br>
+<br>
+盤子的厚度是固定的，盤子的直徑D和黏土的量有以下的關係：</p><p><img border="0" src="p11001b.gif" width="184" height="53"><br>
+<br>
+V是每個盤子用的黏土量,V<sub>0</sub>是在燒製過程中每個盤子消耗的量，當V<sub>0 
+</sub>&gt;= V時就做不出盤子。<br>
+<br>
+例如,假設 V<sub>total</sub>=10, V<sub>0</sub>=1，而如果我們只做一個盤子，那麼 
+V=10/1=10, D=0.9, 但如果做成兩個的話，V=10/2=5，而半徑就是 D=0.3*sqrt(5-1)=0.6，因此以這種方式產生的項鍊長度是 
+1.2。<br>
+<br>
+從上面的例子明顯的項鍊的長度隨著盤子數而改變，請寫一個程式算出要把黏土分成多少份，可以使項鍊最長。</p> 
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00"><a name="SECTION0001001000000000000000">Input</a></span></b></p> 
+<p>每一列有兩個整數 V<sub>total</sub> （0&lt;V<sub>total</sub> &lt;= 
+60000），V<sub>0 </sub>（0 &lt; V<sub>0&nbsp;</sub> &lt;= 600）。<br>
+當 V<sub>total</sub>&nbsp; = V<sub>0&nbsp;</sub> = 0 時輸入結束。</p> 
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00"><a name="SECTION0001002000000000000000">Output</a></span></b></p> 
+<p>每組測試資料輸出一列，可以使項鍊最長的黏土分割份數。如果不只一種分割份數，或是沒有任何一種方法可以做出盤子，請輸出 
+0。<br>
+</p> 
+<p style="background-color: #00ff00" align="left"><b><span style="background-color: #00ff00"><a name="SECTION0001003000000000000000">Sample Input</a></span></b></p>  
+<pre>10 1
+10 2
+0 0</pre>  
+<p style="background-color: #00ff00" align="left"><b><span style="background-color: #00ff00"><a name="SECTION0001004000000000000000">Sample Output</a></span></b></p>  
+<pre>5
+0</pre>
+  
+<hr>  
+<address>  
+	<font color="#ffff00">  
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by 
+    PG</span></font></address> 
+</body> 
+</html> 

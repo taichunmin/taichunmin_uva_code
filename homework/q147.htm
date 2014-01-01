@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q147: Dollars</h1>              
+<p>紐西蘭的貨幣包含了 $100, $50, $20, $10,&nbsp; $5 的紙鈔和 $2, 
+$1, 50c, 20c, 10c, 5c 的硬幣。給你某金額的數字，請你寫一個程式回答：使用這些面額的紙鈔或硬幣，有多少種不同的方法可以組合成這個金額。例如：20c 
+可以有4個方法可以得到：（改變金額的順序不會增加方法數，例如 
+2 * 5c + 1 * 10c 和下面第3種方法視為同一種）</p>     
+<ul>
+  <li>1 * 20c</li>
+  <li>2 * 10c</li>
+  <li>1* 10c + 2 * 5c</li>
+  <li>4 * 5c</li>
+</ul>
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                    
+<p><span lang="zh-tw">輸入含有多組測試資料。</span></p>              
+<p><span lang="zh-tw">每組測試資料一列，含有 1 個金額<b>（不大於&nbsp; 
+$300.00）</b>。這個金額一定是合法的，也就是一定是 5c 
+的倍數。</span></p>   
+<p><span lang="zh-tw">當輸入為&nbsp; 0.00 時代表輸入結束，</span>請參考Sample Input。</p>      
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                                 
+<p>對每組測試資料輸出一列 
+，包含輸入的金額（小數點2位，總長度6位，靠右對齊）以及有多少種不同的方法可以組合成這個金額（總長度17位，靠右對齊）。請參考 Sample Output。</p>             
+<table border="1" width="100%" cellpadding="5">               
+  <tr>               
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                      
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                     
+  </tr>                     
+  <tr>                     
+    <td width="50%">      
+      <pre>0.20
+2.00
+0.50
+1.00
+100.95
+300.00
+0.00</pre>  
+    </td>                     
+    <td width="50%"><pre>  0.20                4
+  2.00              293
+  0.50               13
+  1.00               50
+100.95      50619764500
+300.00  181490736388615
+</pre>  
+    </td>                    
+  </tr>                    
+</table>                    
+                                                      
+</body>                                                      
+                                                      
+</html>

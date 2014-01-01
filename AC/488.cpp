@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a,f,t;
+    cin>>t;
+    for(int k=0;k<t;k++)
+    {
+        cin>>a>>f;
+        if(k>0)cout<<endl;
+        for(int i=0;i<f;i++)
+        {
+            if(a>0)cout<<"1\n";
+            if(a>1)cout<<"22\n";
+            if(a>2)cout<<"333\n";
+            if(a>3)cout<<"4444\n";
+            if(a>4)cout<<"55555\n";
+            if(a>5)cout<<"666666\n";
+            if(a>6)cout<<"7777777\n";
+            if(a>7)cout<<"88888888\n";
+            if(a>8)cout<<"999999999\n";
+            if(a>8)cout<<"88888888\n";
+            if(a>7)cout<<"7777777\n";
+            if(a>6)cout<<"666666\n";
+            if(a>5)cout<<"55555\n";
+            if(a>4)cout<<"4444\n";
+            if(a>3)cout<<"333\n";
+            if(a>2)cout<<"22\n";
+            if(a>1)cout<<"1\n";
+            if(i<(f-1))cout<<endl;
+        }
+    }
+system("pause");
+}

@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q389: Basically Speaking</h1>              
+<p>有一家製造計算機的公司請你幫忙設計新型的計算機。這台計算機必須可以做不同數字系統的轉換（例如：將一個2進位的數字轉換成10進位的數字）。這台計算機還必須有下列的特性：</p>     
+<ul>
+  <li>有 7-digit 的顯示</li>
+  <li>除了有 0 ～ 9 的按鈕之外，還有 A ～ F 的按鈕</li>
+  <li>支援 2 進位到 16 進位</li>
+</ul>
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                    
+<p><span lang="zh-tw">輸入含有多組測試資料。</span></p>              
+<p><span lang="zh-tw">每組測試資料一列，含有 3 個</span><span lang="zh-tw">數字。第一個數字為你所要轉換的數字。第二個數字為要轉換的數字為多少進位。第三個數字為要將這個數字轉成多少進位的數。在這3個數前後可能有一或多個空白字元存在。</span></p>   
+<p><span lang="zh-tw">以Sample Input 第一組測試資料為例：將 1111000 
+從  2 進位 轉換成 10 進位</span>。</p>      
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                                 
+<p>對每組測試資料輸出一列 
+，輸出轉換後出現在計算機顯示器上的數字。這些數字長度為 
+7，靠右對齊。如果這個數字太大無法以計算機顯示器顯示，則輸出 
+&quot;ERROR&quot;。輸出格式請參考 Sample Output。</p>              
+<table border="1" width="100%" cellpadding="5">                
+  <tr>                
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                       
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                      
+  </tr>                      
+  <tr>                      
+    <td width="50%">       
+      <pre>1111000  2 10
+  1111000  2  16  
+2102101    3  10
+2102101  3 15
+  12312  4  2
+     1A 15  2
+1234567 10 16
+   ABCD 16 15
+   0 10 2
+ 000234 10 10  
+   F00000 16 10
+</pre>   
+    </td>                      
+    <td width="50%"><pre>    120
+     78
+   1765
+    7CA
+  ERROR
+  11001
+ 12D687
+   D071
+      0
+    234
+  ERROR
+</pre>   
+    </td>                     
+  </tr>                     
+</table>                     
+                                                       
+</body>                                                       
+                                                       
+</html>

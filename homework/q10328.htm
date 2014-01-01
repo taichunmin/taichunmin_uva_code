@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10328: Coin Toss</h1>
+<p>擲硬幣常常被用來決定一件事情。通常會使用一枚公平的硬幣，就是兩面（H 和 T）出現的機率一樣。在這個問題中硬幣要被擲 n 
+次，其結果可以用一字串來表示。例如： n=3, 則有 8 種可能的情況：</p>
+<p align="center">HHH HHT HTH HTT THH THT TTH TTT </p>
+<p>我們有興趣的是 H 連續出現的情況，在上面的情況中，3 個 H 連續的有 1 種，2 個 H 連續的有 3 種，至少有 1 個 H 的有 7 種。
+假設一枚硬幣被擲<font color="#FF0000"> n</font> 次，可能的結果有 2<sup>n</sup> 種，這其中有多少種含有<font color="#0000FF">連續至少 
+</font><font color="#FF0000">k</font> 個 H。</p>   
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                  
+<p><span lang="zh-tw">輸入含有多組測試資料。每組測試資料一列，含有 2 個正整數 n 和 k （ 1 &lt;= k &lt;= n &lt;= 100）。</span></p>               
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                             
+<p>對每一組測試資料輸出一列，輸出有多少種含有連續至少 k 個 H。</p> 
+<table border="1" width="100%" cellpadding="5">            
+  <tr>            
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                   
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                  
+  </tr>                  
+  <tr>                  
+    <td width="50%">   
+      <pre>4 1
+4 2
+4 3
+4 4
+6 2
+99 67
+100 24</pre>
+    </td>                  
+    <td width="50%">            
+      <pre>15
+8
+3
+1
+43
+73014444032
+2946755075273927119863799</pre>
+    </td>                 
+  </tr>                 
+</table>                 
+                                                   
+</body>                                                   
+                                                   
+</html>

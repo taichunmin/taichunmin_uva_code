@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10397: Connect the Campus</h1>          
+<p>在Waterloo大學裡有許多的建築物正在興建。學校雇用了建築工人、水電工人以及一個程式設計師。程式設計師？不要懷疑，那個人就是你。你的任務就是要算出要建置校園網路需要用多少纜線。<p>每棟建築物可以視為在X-Y平面上的一個點。連接2棟建築物的網路線均為直線，且網路線為雙向的。網路線可以自由的跨越，但是只有在建築物的地方網路線才有接頭。<p>學校給你一張校園的地圖，上面有各建築物的位置座標，以及一些已經存在於建築物間的網路線。對那些已經存在的網路線，你不要去動它。你的任務是要架設新的網路線，使得所有的建築物都可以藉由網路相連。當然，學校方面希望你新架設的網路線越短越好。
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>               
+<p>輸入含有多組測試資料。</p>    
+<p>每組測試資料的第一列有一個整數N（1 &lt;= N &lt;= 750），代表建築物的數目（建築物的編號從1到N）。接下來的N列每列有2個整數（介於-10000到10000之間），代表為這N棟建築物的座標（不會有2棟不同的建築物在同一個點上）。再接下來的一列有一個整數M（0 
+&lt;= M &lt;= 1000）代表已有M條網路線連接於建築物之間。再接下來的M列每列有2個正整數代表某條已存在的網路線所連接的2棟建築物編號。任2棟建築物間最多只會有一條網路線連接。</p>    
+<p>請參考Sample Input。</p>    
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                
+<p>每組測試資料輸出一列。含有一個浮點數（小數點後2位），代表你所新架設的網路線的長度，使得校園間各建築物都可以網路連接，而且長度要最小。</p> 
+<p align="left" style="background-color: #00FF00"><span style="background-color: #00FF00"><b>Sample                               
+Input</b></span></p>                               
+<pre>4
+103 104
+104 100
+104 103
+100 100
+1
+4 2
+4
+0 0
+0 1
+1 0
+1 1
+2
+1 2
+3 4</pre> 
+<p align="left" style="background-color: #00FF00"><span style="background-color: #00FF00"><b>Sample                                   
+Output</b></span></p>                               
+<pre>4.41
+1.00</pre>  
+                             
+</body>                             
+                             
+</html>                             

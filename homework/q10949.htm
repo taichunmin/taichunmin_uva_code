@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q10949: Kids in a Grid</h1>
+<p><br>
+兩個小孩在H*W的格子上走動，每個方格都含有一個字元(ASC碼在33和127間)，這兩個小孩每一步可以走東、西、南、北的任一方向(北是向上，南是向下，東是向右，西是向左)，第一個小孩走了N步，第二個小孩走了M步。(0&lt;=N&lt;=M&lt;=20000)<br>
+<br>
+如果我們把他們走過的字母寫成字串，我們可以得到兩串字串 S<sub>A </sub>和 S<sub>B</sub>。你的任務是消掉最少的字元，讓 S<sub>A
+</sub>和 S<sub>B </sub>變成相等的字串。</p>
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00"><a name="SECTION0001001000000000000000">Input</a></span></b></p>   
+<p>第一行有一個整數 t (1&lt;= t &lt;=15)，代表有幾組測資，每組測資包含數列。第一列有兩個整數 H 和 W（1 &lt;= H,W &lt;= 20）。以下的 H 
+列為格子上的字元。下一列有3個整數 N、X<sub>0</sub>、Y<sub>0</sub>（1 &lt;= X<sub>0</sub> &lt;= H, 1 &lt;= Y<sub>0
+</sub>&lt;=W)，最左上角那格代表(1,1)。第一個小孩從(X<sub>0</sub>,Y<sub>0</sub>)開始走N步，下一列有一串長度為N的字串，N(北)、S(南)、E(東)、W(西)表示他走的方向。第二個小孩走的方法也是類似的。</p>
+<p>你可以假設小孩走的序列是正確的，也就是說絕不會走出格子外。請參考Sample Input。</p>  
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00"><a name="SECTION0001002000000000000000">Output</a></span></b></p>    
+<p>對每一組測試資料輸出這是第幾組測資和兩個正整數 X<sub>A </sub>和 X<sub>B</sub>，分別是 S<sub>A </sub>和 S<sub>B
+</sub>需要消掉的最少字元數。  
+</p>   
+<table border="1" width="116%" cellpadding="5">                    
+  <tr>                    
+    <td width="52%" bgcolor="#00FF00"><b>Sample Input</b></td>                                
+    <td width="62%" bgcolor="#00FF00"><b>Sample Output</b></td>                               
+  </tr>                               
+  <tr>                               
+    <td width="52%">                
+      <pre>2
+3 4
+ABCD
+DEFG
+ABCD
+4 1 1
+EEES
+3 3 1
+NES
+3 4
+ABCD
+DEFG
+ABCD
+4 1 1
+EEES
+3 3 1
+NES</pre>               
+    </td>                               
+    <td width="62%"> 
+<pre>Case 1: 3 2
+Case 2: 3 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </pre>    
+    </td>                              
+  </tr>                              
+</table>                              
+                                                                
+<p>在第一組測試資料中,S<sub>A</sub>是ABCDG，S<sub>B</sub>是ADEB，我們最少需要在S<sub>A</sub>中消去3個字元和在S<sub>B</sub>中消去2個(讓它們都變成AB或AD)。</p>
+                                                                
+<hr>      
+<address>      
+	<font color="#ffff00">      
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by   
+    Wei-Ming Chen</span></font></address>   
+</body>   
+</html>   

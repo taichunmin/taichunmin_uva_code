@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q10078: The Art Gallery</h1> 
+<p><i>世紀藝術</i> 擁有好幾百個藝廊，散佈在國家各地。你被雇用去寫一支用來決定藝廊有沒有 <i>關鍵點</i> 的程式。
+藝廊的外形是多邊形，而且 <i>關鍵點</i> 位於藝廊當中看不見整個藝廊的地方。</p>
+<p>舉例來說，藝廊一（如下圖所示）的 A 點就是一個關鍵點；至於藝廊二就沒有任何關鍵點。</p> 
+<p align="center"><img border="0" src="p10078.gif" width="415" height="202"></p>  
+<p><i>世紀藝術</i> 會提供你藝廊的形狀，以一連串的 (x,y) 二維座標（以某個轉角當起點）來依序表示藝廊的每個轉角。
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Input</span></b></p>  
+<p>輸入檔案包含多組測試資料。一組測試資料描述一個藝廊的形狀。</p>
+<p>每筆測試資料的第一行都包含一個整數 N（3 &lt;= N &lt;= 50），代表藝廊的轉角數目。接下來的 N 行都會有兩個整數
+，代表著藝廊的轉角座標 (x,y)（0 &lt;= x, y &lt;= 1000）。轉角座標的次序，和從藝廊的邊界行進時遇到的轉角次序相同。
+相鄰的座標們都不會有三點共線的情形。</p>
+<p> 當 N=0 時代表輸入結束，請參考Sample Input。</p>
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Output</span></b></p>   
+<p>對於每組測試資料，如果藝廊包含關鍵點就輸出 "Yes"，否則就輸出 "No"。對每一組測試資料輸出一列。輸出格式請參考Sample Output。</p>
+<table border="1" width="100%" cellpadding="5">                   
+  <tr>                   
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                                 
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                                
+  </tr>                                
+  <tr>                                
+    <td width="50%" valign="top">                 
+      <pre>4
+0 0
+3 0
+3 3
+0 3
+4
+0 0
+3 0
+1 1
+0 3
+0
+</pre>
+    </td>                                
+    <td width="50%" valign="top">                          
+    <pre>No
+Yes
+</pre>
+    </td>                               
+  </tr>                               
+</table>                               
+                                                                 
+<hr>       
+<address>       
+	<font color="#ffff00">       
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by DJWS</span></font></address>
+</body>   
+</html>   

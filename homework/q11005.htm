@@ -1,0 +1,86 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q11005: Cheapest Base</h1>
+<p>當我們想要把一些字印在紙上時，我們需要墨水。但不是每個字都需要相同的墨水，例如'W'，'M'，'8'要比'i'，'c'，'1'來的貴。這個問題主要是討論在不同進位制下需要的不同花費。<br>
+<br>
+數字可以被表示成不同的進位制，當我們把數字表示成n進位時（2   
+&lt;= n &lt;= 36），我們需要用到字串'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'的前   
+n 項。<br>  
+<br>  
+每個字元都有他獨特的價錢，以一個1~128的整數表示，對於每一個數字，他被印出的價錢是組成他的數字被印出的價錢和。現在給你一個數字，請計算他用哪些進位輸出最省錢。（註：輸出的數最左方不會有沒有意義的   
+0）</p>   
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00"><a name="SECTION0001001000000000000000">Input</a></span></b></p>   
+<p>最多有25組測資，第一列有一個正整數說明以下有幾個測資，每個測資的前四列每列有九個數，代表那三十六個字元的花費。接下來的數代表這組測資有幾個數，每個數介於0和2000000000間。</p>  
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00"><a name="SECTION0001002000000000000000">Output</a></span></b></p>    
+<p>第一列先輸入"Case X:"(X表示是第幾組)。<br>   
+<br>   
+對於這組測資的每一個數，先輸出"Cheapest base(s) for number Y: "，然後再輸出哪些進位制能讓它花最少的錢（遞增順序），如果超過一個進位制，中間請加空白鍵。  
+</p>   
+<p>兩組測資間亦請空一列。輸出格式請參考 Sample Output。  
+</p>   
+<table border="1" width="116%" cellpadding="5">                    
+  <tr>                    
+    <td width="52%" bgcolor="#00FF00"><b>Sample Input</b></td>                                
+    <td width="62%" bgcolor="#00FF00"><b>Sample Output</b></td>                               
+  </tr>                               
+  <tr>                               
+    <td width="52%">                
+      <pre>2
+10 8 12 13 15 13 13 16 9
+11 18 24 21 23 23 23 13 15
+17 33 21 23 27 26 27 19 4
+22 18 30 30 24 16 26 21 21
+5
+98329921
+12345
+800348
+14
+873645
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1
+4
+0
+1
+10
+100
+      </pre>               
+    </td>                               
+    <td width="62%"> 
+<pre>Case 1:
+Cheapest base(s) for number 98329921: 24
+Cheapest base(s) for number 12345: 13 31
+Cheapest base(s) for number 800348: 31
+Cheapest base(s) for number 14: 13
+Cheapest base(s) for number 873645: 22
+
+Case 2:
+Cheapest base(s) for number 0: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36
+Cheapest base(s) for number 1: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36
+Cheapest base(s) for number 10: 11 12 13 14 15 16 17 18 19 20 21 22 23 24 
+25 26 27 28 29 30 31 32 33 34 35 36
+Cheapest base(s) for number 100: 11 12 13 14 15 16 17 18 19 20 21 22 23 24 
+25 26 27 28 29 30 31 32 33 34 35 36
+
+      </pre>    
+    </td>                              
+  </tr>                              
+</table>                              
+                                                                
+<hr>      
+<address>      
+	<font color="#ffff00">      
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by   
+    Wei-Ming Chen</span></font></address>   
+</body>   
+</html>   

@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10377: Maze Traversal</h1>          
+<p>在人工智慧的領域裡時常討論到機器人走迷宮的問題。一個迷宮包含了走道與牆，機器人可以沿著走道行走，但是不可以穿牆。
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>               
+<p><b>輸入的第一列有一個整數，代表以下有多少組測試資料。接下來的一列為空白。另外，每組測試資料間亦空一列。</b></p>    
+<p>每組測試資料的第一列有2個不大於60的正整數a,b，分別代表迷宮的列數及欄數。接下來的a列每列有b個字元。空白字元代表走道，星號代表牆。這個迷宮不需要有出口。</p>      
+<p>在迷宮後的第一列有2個整數，代表一開始時機器人所在迷宮中的位置。機器人一開始時是面向北方的（也就是面向第一列的方向）。</p>      
+<p>接下來的輸入代表機器人的動作指令。合法的指令有以下4種（不合法的指令應被忽略）：</p>      
+<ul>
+  <li>R&nbsp; 機器人順時鐘方向轉90度（向右轉）</li>
+  <li>L&nbsp; 機器人逆時鐘方向轉90度（向左轉）</li>
+  <li>F&nbsp; 
+    機器人向前移動一格，但是如果他前面那一格是牆的話，此動作無效。</li>
+  <li>Q&nbsp; 
+    本組測試資料結束，輸出機器人現在所在的位置及面向何方向。</li>
+</ul>
+<p>請參考Sample Input。</p> 
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                   
+<p>每組測試資料輸出一列。含有2個整數及一個字元，分別代表機器人所在的位置（列數及欄數）及面向何方（N,W,S,E分別代表北、西、南、東）。測試資料間輸出亦請空一列。請參考Sample 
+Output。</p>   
+<p align="left" style="background-color: #00FF00"><span style="background-color: #00FF00"><b>Sample                                  
+Input</b></span></p>                                  
+<pre>2
+
+7 8
+********
+* * * **
+* *    *
+* * ** *
+* * *  *
+*   * **
+********
+2 4
+RRFLFF FFR
+FF
+RFFQ
+
+3 4
+****
+*  *
+****
+2 2
+FR  F  Q</pre>    
+<p align="left" style="background-color: #00FF00"><span style="background-color: #00FF00"><b>Sample                                      
+Output</b></span></p>                                  
+<pre>5 6 W
+
+2 3 E</pre>     
+                                
+<p>　</p> 
+                                
+</body>                                
+                                
+</html>                                

@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q11029: Leading and Trailing</h1>              
+<p>所有在程式設計已經有點經驗的人都知道，當 k  
+很大時你無法完整的表達出 n<sup>k</sup>。例如： C 語言的函數 
+<b> 
+pow(123456,455)</b> 能夠用 double  
+資料型態來表達，但是你卻無法得到所有正確的數字。然而，若是能知道一些最左邊（leading）和最右邊（trailing）數字的話，也可稍微得到一些滿足。</p> 
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                     
+<p><span lang="zh-tw">輸入的第一列有一個整數 T（T &lt; 1001），代表有幾組測試資料。接下來的  
+T 列，每列有2個正整數 n 和 k</span>。n  
+可以用32位元的整數表達，而 k&lt;10000001。</p>  
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                                  
+<p>每組<span lang="zh-tw">測試資料</span>輸出一列，輸出 LLL...TTT  
+的樣式。其中 LLL 代表 n<sup>k</sup> 的最左邊3個數字，TTT 代表  
+n<sup>k</sup> 的最右邊3個數字。例如 123456<sup>2</sup> = 15241383936，所以你應該輸出  
+152...936。</p>            
+<p>你可以假設 n<sup>k</sup> 至少有6位數。</p>           
+<table border="1" width="100%" cellpadding="5">            
+  <tr>            
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                         
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                        
+  </tr>                        
+  <tr>                        
+    <td width="50%">         
+      <pre>3
+123456 1
+123456 2
+<span class="postbody">2100000056 67333</span></pre>   
+    </td>                       
+    <td width="50%">                 
+      <pre>123...456
+152...936
+982...016
+</pre>   
+    </td>                      
+  </tr>                      
+</table>                      
+                                                        
+</body>                                                       
+                                                       
+</html>

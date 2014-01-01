@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q10959: The Party, Part I</h1>
+<p>Don Giovanni 喜歡跳舞，有天他開了一場舞會，邀請很多人一起來跳舞，大家都覺得能和主人(Don Giovanni)一起跳舞是一見榮幸的事，所以他們創造了一個名詞叫Don Giovanni number， Don Giovanni number 的計算方法如下：</p>
+<ol>
+  <li>沒有人的 Don Giovanni number 是負的</li> 
+  <li>Don Giovanni 自己的 Don Giovanni number 是 0</li> 
+  <li>和 Don Giovanni 跳過舞的人他們的 Don Giovanni number 是 1 ，和 Don Giovanni number 是 n 的人跳過舞且沒有和 Don Giovanni number 比 n 小的人跳過舞的人，他們的 Don Giovanni number 是 n+1</li> 
+  <li>如果有人一直沒有和有 Don Giovanni number 的人跳舞，則他的 Don Giovanni number 是無限大，但是題目保證不會產生這種情形</li> 
+</ol> 
+<p>你的工作是要確定每一個人的 Don Giovanni number</p> 
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00"><a name="SECTION0001001000000000000000">Input</a></span></b></p>    
+<p>輸入的第一列會有一個正整數，代表以下有幾組測試資料。接下來空一列，並且各組測試資料間也空一列。<br>
+<br>
+每一組測試資料的第一列會有兩個數，P和D，P是這場舞會中有幾個人(每個人有一個編號從0到P-1，Don Giovanni 的編號是0)，D是有幾對跳舞的人(P&lt;=1000，D&lt;P(P-1)/2)，然後以下D列每列會有兩個數，代表跳舞的兩人的編號。</p>  
+<p>請參考Sample Input。</p>  
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00"><a name="SECTION0001002000000000000000">Output</a></span></b></p>    
+<p>輸出 <b><font color="#FF0000">1</font></b> 號到 P-1 號的 Don Giovanni number，每個數字一列（請注意：你不需要輸出 Don Giovanni 的 Don Giovanni 
+number）<br>
+<br>
+每兩組測試資料間也請空一行。請參考 Sample Output。   
+</p>    
+<table border="1" width="116%" cellpadding="5">                     
+  <tr>                     
+    <td width="52%" bgcolor="#00FF00"><b>Sample Input</b></td>                                 
+    <td width="62%" bgcolor="#00FF00"><b>Sample Output</b></td>                                
+  </tr>                                
+  <tr>                                
+    <td width="52%">                 
+      <pre>2
+
+5 6
+0 1
+0 2
+3 2
+2 4
+4 3
+1 2
+
+5 5
+1 2
+0 1
+2 3
+3 4
+0 4
+   </pre>                
+    </td>                                
+    <td width="62%">  
+<pre>1
+1
+2
+2
+
+1
+2
+2
+1
+
+
+
+
+
+
+
+      </pre>     
+    </td>                               
+  </tr>                               
+</table>                               
+                                                                 
+<hr>       
+<address>       
+	<font color="#ffff00">       
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by    
+    Wei-Ming Chen</span></font></address>    
+</body>    
+</html>    

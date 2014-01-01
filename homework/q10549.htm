@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10549: Russian Dolls</h1>              
+<p>你有沒有看過如下圖的俄羅斯娃娃。娃娃是木頭做的，且中間是空心的。娃娃都是好幾個一組，形狀相同，但大小不同。特別的是最大的娃娃可以把第二大的娃娃放進其中，第二大的娃娃可以把第三大的娃娃放進其中，依此類推。</p> 
+<p align="center"><img border="0" src="p10549.jpg" width="320" height="235"></p> 
+<p>我們可以大概的假設娃娃的形狀都是圓柱體，高度為 h，半徑為  
+d，且殼的厚度為 w。因此娃娃中間空心部分的大小為高度 h-2w，半徑  
+d-2w 的圓柱體。</p>  
+<p>Boris 和 Natasha  
+兩個小朋友各有一組這樣的俄羅斯娃娃。這2組娃娃看起來外表都一樣，且娃娃的數目相同（都是 
+n），但是大小不一樣。昨天晚上2個小朋友在玩這些娃娃並且把他們留在客廳中。媽媽於是把所有的娃娃都收在一個箱子中。你能幫2個小朋友分出他們的娃娃嗎？</p> 
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                     
+<p><span lang="zh-tw">輸入包含多組測試資料。每組測試資料的第一列有一個整數 
+n（1 &lt; n &lt;= 100），代表每組有多少個娃娃。接下來的 2n 列，每列有3個整數 
+h,d,w</span><span lang="zh-tw">（h,d &gt;= 2w &gt; 0），分別代表</span><span lang="zh-tw">一個娃娃的高度，半徑，厚度</span>。當  
+n=0 時代表輸入結束。</p>   
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                                   
+<p>對每組<span lang="zh-tw">測試資料，將娃娃分成2組，每組都可以把小的放進大的中，如同上面所述。前 
+n 
+列輸出第一組娃娃（按高度由大到小排列），接下來的一列僅含一個減號，再接下來的 
+n 列為第二組娃娃（也是按高度由大到小排列）</span>。請相信一定會有解答，如果有不只一種解答，任何一種都可以。</p>             
+<p>測試資料間也請輸出一空白列。請參考 Sample Output。</p>             
+<table border="1" width="100%" cellpadding="5">             
+  <tr>             
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                           
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                          
+  </tr>                          
+  <tr>                          
+    <td width="50%">           
+      <pre>3
+100 100 3
+97 97 3
+94 94 3
+91 91 3
+88 88 3
+85 85 3
+5
+100 100 1
+97 97 3
+98 98 1
+96 96 1
+94 94 1
+92 92 1
+90 90 1
+88 88 1
+86 86 1
+84 84 1
+0</pre>     
+    </td>                         
+    <td width="50%">                   
+      <pre>100 100 3
+94 94 3
+88 88 3
+-
+97 97 3
+91 91 3
+85 85 3
+
+100 100 1
+98 98 1
+96 96 1
+94 94 1
+92 92 1
+-
+97 97 3
+90 90 1
+88 88 1
+86 86 1
+84 84 1</pre>     
+    </td>                        
+  </tr>                        
+</table>                        
+                                                          
+</body>                                                         
+                                                         
+</html>

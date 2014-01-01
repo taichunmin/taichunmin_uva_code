@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10903: Rock-Paper-Scissors</h1>              
+<p>剪刀石頭布是個 2 
+個人玩的遊戲，玩家各選剪刀、石頭、布其中之ㄧ，剪刀贏布，布贏石頭，石頭贏剪刀，一樣就算平手。</p>
+<p>現在總共有 <b>n</b> 個玩家，每個玩家要與其他人比賽 <b>k</b> 
+場，總共也就是 k*n*(n-1)/2 
+場比賽，你的任務就是計算每個玩家的勝率，勝率的定義是 
+w/(w+l)，w 是勝場數，l 是敗場數。</p>
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                    
+<p><span lang="zh-tw">輸入含有多組</span>測試資料<span lang="zh-tw">，每組</span>測試資料<span lang="zh-tw">的第1列包含2個整數 
+n和 k（ 1&lt;= n,k &lt;= 100），n, k如上面的定義，下面的</span><span lang="zh-tw"> 
+</span>k*n*(n-1)/2 列，<span lang="zh-tw">每一列代表一場比賽，</span><span lang="zh-tw">包含了p1 
+,m1, p2, m2，1&lt;= p1,p2 &lt;= n （p1, p2 代表玩家號碼，p1不會等於 
+p2），m1, m2各代表 p1, p2 出的拳 （&quot;rock&quot;, &quot;scissors",或 
+&quot;paper&quot;）。</span></p>
+<p><span lang="zh-tw">當 n=0 代表輸入結束。</span>請參考Sample Input。</p> 
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                               
+<p>輸出每個玩家的勝率（四捨五入到小數點下3位），1人1列，如果勝率無意義，輸出 
+"-"。測試資料間請空一列。</p>           
+<table border="1" width="100%" cellpadding="5">            
+  <tr>            
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                     
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                    
+  </tr>                    
+  <tr>                    
+    <td width="50%">     
+      <pre>2 4
+1 rock 2 paper
+1 scissors 2 paper
+1 rock 2 rock
+2 rock 1 scissors
+2 1
+1 rock 2 paper
+3 1
+1 rock 3 rock
+2 paper 1 scissors
+2 paper 3 paper
+0
+</pre>    
+    </td>                    
+    <td width="50%">              
+      <pre>0.333
+0.667
+
+0.000
+1.000
+
+1.000
+0.000
+-
+
+
+
+</pre>    
+    </td>                   
+  </tr>                   
+</table>                   
+                                                     
+<p><font color="#FFFF00"><span style="background-color: #000000">Translated by  
+Simon</span></font></p> 
+                                                    
+</body>                                                    
+                                                    
+</html>

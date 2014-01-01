@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10912: Simple Minded Hashing</h1>              
+<p>
+我想你們多少知道關於「雜湊（hashing）」。它使用某些數學函數把一字串對應到數值上。在這個問題中，我們將考慮一種相當簡單的雜湊方法：針對字串中的每個字元，我們給予它一個數值，然後算出其總和。</p>
+<p>例如：字串 &quot;acm&quot; 被對應到 1 + 3 + 13 = 17。不幸的是，這個方法並不會給你一對一的對應。字串 &quot;adl&quot; 也對應到 17（1 + 4 
++ 12）。這種情形被稱為碰撞（collision）。</p>   
+<p>在這個問題中你要使用上述的雜湊函數找出長度 L，對應到 S 的字串共有多少種。你所必須考慮的字串內容均為小寫字母，且呈嚴格遞增（strictly 
+ascending）。</p>
+<p>例如：若 L=3, S=10 那麼有 4 個這樣的字串。</p>
+<ol>
+	<li>abg</li>
+	<li>acf</li>
+	<li>ade</li>
+	<li>bce</li>
+</ol>
+<p>agb 也對應到 10，但是並不符合嚴格遞增的規定。 bh 也對應到 10 ，但是其長度僅為 2 。</p>   
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                  
+<p><span lang="zh-tw">輸入含有多組測試資料。每組測試資料一列，有 2 個正整數 L 和 S（0  
+&lt; L, S &lt; 10000）。當 L=S=0 時代表輸入結束。</span></p>               
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                             
+<p>對每一組測試資料輸出一列，輸出這是第幾組測試資料以及符合的字串數目（一定可以用 32 bit signed integer 
+表達），輸出格式請參考Sample Output。</p> 
+<table border="1" width="100%" cellpadding="5">            
+  <tr>            
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                   
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                  
+  </tr>                  
+  <tr>                  
+    <td width="50%">   
+      <pre>3 10
+2 3
+30 400
+10 500
+0 0</pre>  
+    </td>                  
+    <td width="50%">            
+      <pre>Case 1: 4
+Case 2: 1
+Case 3: 0
+Case 4: 0
+
+
+</pre>  
+    </td>                 
+  </tr>                 
+</table>                 
+                                                   
+</body>                                                   
+                                                   
+</html>

@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+
+<body>
+<h1 align="center">Q10963: The Swallowing Ground</h1> 
+<p>現在缺德的人已經被懲罰了，但是仍然還有一些事情要做。舉例來說，地面需要自行接合才行。（要不然的話，好人可是
+會不小心掉入地獄的，這不太好。）</p>
+<p>地面藉由崩塌的方式來將 Don Giovanni 吞進去：有一部分的地面崩塌──落入了地獄，而且崩塌造成的裂口
+將 Don Giovanni 吞了進去。現在唯一能修復地面的方法，就是滑動地面來接合裂口。這裡有個範例，左邊的圖（從空中鳥瞰圖）是一個有著深
+谷的地面。假設地面向南北無限延伸，而東西兩端都緊鄰著另外的地面，但是之間有可滑動的接縫。如此一來，北邊的陸塊可
+以向南滑動，南邊的陸塊也可以向北滑動。右邊的圖是滑動的結果，而裂口接合了。</p> 
+<p align="center"><img border="0" src="p10963a.gif" width="243" height="112"></p>
+<p>這裡有另外一個範例。以左邊的圖來說，圖中的裂口不能藉由滑動來接合。右邊的圖是盡力滑動之後的結果，但是仍然有個洞。</p>
+<p align="center"><img border="0" src="p10963b.gif" width="243" height="112"></p>
+<p>請寫一隻程式來判斷裂口能不能接合。地面由方格圖組成，其中有好幾個方格是崩塌造成的洞，而裂口便是由這些洞組成的。</p>
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Input</span></b></p>
+<p>輸入的第一列有一個正整數，代表接下來有多少組測試資料。</p>
+<p>每筆測試資料的第一行都包含一個整數 W，代表直行的數目。接下來的 W 行都會有兩個整數 y1、y2（-100 &lt;= y1, y2 &lt;= 100）
+，分別代表著每個直行當中，裂口最北端和最南端的Y座標位置。輸入格式請參考 Sample Input。</p>
+<p>測試資料一定會是個有效的裂口：所有的洞剛好將地面分成南北兩塊，陸塊中不會有洞，也不會有孤立的陸塊在裂口之中。</p>
+<p style="background-color: #ffff00" align="left"><b><span style="background-color: #ffff00">Output</span></b></p>
+<p>對於每組測試資料，如果裂口接合就輸出一行 "Yes"，否則就輸出一行 "No"。每筆輸出之間請空一行，請參考Sample Output。</p>
+<table border="1" width="100%" cellpadding="5">
+  <tr>
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <pre>2
+
+5
+2 1
+0 -1
+1 0
+1 0
+2 1
+
+1
+2 1
+</pre>
+    </td>
+    <td width="50%" valign="top">
+    <pre>yes
+
+yes
+</pre>
+    </td>
+  </tr>
+</table>
+
+<hr>
+<address>
+	<font color="#ffff00">
+	<span style="font-style: normal; background-color: rgb(0, 0, 0)">Translated by DJWS</span></font></address>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q10129: Play on Words</h1>              
+<p>考古學家有時候遇到一些神秘的門，這些門需要解開特定的謎題才能打開。因為沒有其他方法可以打開門，這謎題對我們來說非常重要。</p>
+<p>在門上有許多磁盤，每個盤子上有一個英文單字在上面。這些盤子必須被安排，使得盤子上的每個單字的第一個字母必須與前一個盤子的單字的最後一個字母相同。例如：acm 
+後面可以接 motorola。你的任務是寫一個程式，讀入所有的單字然後判斷是否可以做出如上述的安排，如此來能打開門。</p>
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                  
+<p><span lang="zh-tw">輸入的第一列有一個整數代表以下有幾組測試資料。</span></p>            
+<p><span lang="zh-tw">每組測試資料的第一列，有一個整數 N（1 &lt;= N &lt;= 100000），代表盤子的數目。
+接下來的N列每列有一個英文單字（最少2個，最長1000個<font color="#FF0000"><b>小寫</b></font>字母，同樣的單字可能會重複出現），代表這N個盤子上的單字。</span>請參考Sample Input。</p>               
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                             
+<p>對每一組測試資料輸出一列。如果可以安排盤子的順序，使得每個單字的第一個字母與前一個盤子的單字的最後一個字母相同，請輸出 Ordering is 
+possible. ，否則，請輸出 The door cannot be opened.</p>
+<p>請注意：所有的盤子都要被使用到，並且都只能使用一次。</p>
+<table border="1" width="100%" cellpadding="5">           
+  <tr>           
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                   
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                  
+  </tr>                  
+  <tr>                  
+    <td width="50%">   
+      <pre>3
+2
+acm
+ibm
+3
+acm
+malform
+mouse
+3
+dog
+cat
+dog</pre> 
+    </td>                 
+    <td width="50%">           
+      <pre>The door cannot be opened.
+Ordering is possible.
+The door cannot be opened.
+
+
+
+
+
+
+
+</pre> 
+    </td>                
+  </tr>                
+</table>                
+                                                  
+</body>                                                  
+                                                  
+</html>

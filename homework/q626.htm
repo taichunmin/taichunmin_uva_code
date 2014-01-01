@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title></title>
+</head>
+<body>
+
+<h1 align="center">Q626: Ecosystem</h1>              
+
+<p>任何生態環境中有不同的食物鏈，比如鷹，老鼠和玉米。因為老鼠吃玉米，鷹吃老鼠。<br>
+同樣我們可以決定一個食物鏈是否為循環結構，比如毛毛虫，植物，真菌。毛毛虫吃植物，植物用真菌產生的有機物質當養分，真菌會分解毛毛虫的屍體來當作食物。這樣就產生一個3個成員的循環食物鏈。</p>
+
+<p>你的任務是找出所有成員為3的循環食物鏈。</p>
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Input</b></span></p>                      
+<p>輸入含有多組測試資料。每組測試資料的第一列為物種的數目  
+n（3 &lt;= n &lt;= 100）。接下來的 n 列是一個 n×n 的矩陣，描述物種之間的食物關係，如果第（i，k）個元素是  
+0，那麼說明 i 不吃 k，1 則說明 i 吃 k。</p> 
+<p align="left" style="background-color: #FFFF00"><span style="background-color: #FFFF00"><b>Output</b></span></p>                                     
+<p>輸出3個成員的循環食物鏈，接著是其數目共多少個。每個循環食物鏈有三種物種，例如  
+1 2 4 就是 1 吃 2， 2 吃 4， 4 吃 1。請注意：1 2 4 和 2 4 1， 4 1 2  
+是一樣的，不過和 4 2 1 就不同了，因為吃和被吃的關係相反。<br>
+<br>
+相同的食物鏈只要輸出一個就好了（輸出物種編號遞增或遞減的那個），輸出的食物鏈之間也要排序，例如  
+1 2 4， 1 2 3，3 2 1 就應該像下面排列：</p>         
+<p>1 2 3<br>  
+1 2 4<br>  
+3 2 1<br>  
+<br>  
+輸出格式請參考Sample Output。</p>          
+<table border="1" width="100%" cellpadding="5">                     
+  <tr>                     
+    <td width="50%" bgcolor="#00FF00"><b>Sample Input</b></td>                             
+    <td width="50%" bgcolor="#00FF00"><b>Sample Output</b></td>                            
+  </tr>                            
+  <tr>                            
+    <td width="50%">             
+      <pre>3
+0 1 0
+0 0 1
+1 0 0
+3
+0 0 1
+1 0 0
+0 1 0
+3
+0 1 1
+1 0 1
+1 1 0
+4
+0 1 1 1
+1 0 1 1
+1 1 0 1
+1 1 1 0
+
+
+
+</pre>            
+    </td>                            
+    <td width="50%">                      
+      <pre>1 2 3
+total:1
+
+3 2 1
+total:1
+
+1 2 3
+3 2 1
+total:2
+
+1 2 3
+1 2 4
+1 3 4
+2 3 4
+3 2 1
+4 2 1
+4 3 1
+4 3 2
+total:8
+
+</pre>            
+    </td>                           
+  </tr>                           
+</table>                           
+                                                             
+<p><font color="#ffff00"><span style="BACKGROUND-COLOR: #000000">Translated by     
+rong juancheng</span></font></p>    
+                                                            
+</body>                                                            
+                                                            
+</html>
