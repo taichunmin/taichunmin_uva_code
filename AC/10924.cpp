@@ -1,4 +1,5 @@
-#include<iostream>
+#include <iostream>
+#include <cstring>
 using namespace std;
 
 int main()
@@ -27,7 +28,7 @@ int main()
             break;
           }
       bool isprime=false;
-      for(int i=0;!(p[i]>total);i++)//新嘗試(判斷的地方用'!') 
+      for(int i=0;!(p[i]>total);i++)//新嘗試(判斷的地方用'!')
         if(total==p[i])
         {
           isprime=true;
